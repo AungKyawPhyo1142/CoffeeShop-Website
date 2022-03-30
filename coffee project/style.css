@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;900&display=swap');
+html{
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.hero{
+    background-color: red;
+    height: 100vh;
+    background-image: url(background-image.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    background-position: center;
+    transition: .4s;
+
+    /*
+    background-position-x:20%;
+    background-position-y:20%;
+    animation: introLoad 2s forwards;
+    */
+}
+
+@keyframes introLoad {
+
+    from{
+        clip-path: polygon(0 0, 100% 0, 0 0, 0 0);
+    }
+    to{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+}
+
+.heading{
+    color: white;
+    font-size: 2rem;
+    padding-right: 1em;
+    padding-top: .5em;
+    font-weight: 500;
+    text-shadow: 0 4px 5px rgb(44, 44, 44);
+    text-align: right;
+}
+
+span{
+    color: #E08B47;
+    transition: .2s ease-in;
+}
+
+span:hover{
+    cursor: pointer;
+    color: #9c5114;
+}
+
+.context{
+    margin: 0;
+    position: absolute;
+    top:50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding-left: 2em;
+    color: white;
+}
+
+.title{
+    font-size: 1.75rem;
+    width: 60%;
+    text-shadow: 0 4px 5px rgb(34, 34, 34);
+/*  
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    overflow: hidden;
+*/
+}
+
+.title h2{
+    font-weight: 500;
+}
+
+.para{
+    width: 50%;
+    margin-top: 2em;    
+    font-size: 1.25em;
+    text-shadow: 0 4px 5px rgb(34, 34, 34);
+    font-weight: lighter;
+/*
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+*/  
+}
+
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
+.scrollDown{
+    margin-top: 3.5em;
+}
+
+.scrollDown a{
+
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    font-size: 1.25rem;
+    padding: .5em;
+    border-radius: 16px;
+    box-shadow:0 4px 5px rgb(51, 51, 51);    ;
+    transition: .4s;
+}
+
+.scrollDown a:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Sticky Nav Bar */
+.navBar{
+    overflow: hidden;
+
+    background-color: #6F462F;
+
+    margin-top: 30em;
+    position: sticky;
+}
+
+.navBar a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.navBar a:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+
+.sticky{
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.sticky + .menu-section {
+    padding-top: 60px;
+}
+
+/* Menu */
+.menu-section{
+    height: 100vh;
+}
+
+.section-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    width: 60%;
+}
+
+.left .grid{
+
+    margin-top: 3.5em;
+    padding: 2em;
+    background-color: #9c5114;
+    display: grid;
+    grid-template-columns: repeat(3,2fr);
+    /*Adding scroll Bar to the div*/
+    
+    overflow-y: scroll;
+    height: 500px;
+    
+}
+
+/*
+*::-webkit-scrollbar{
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track{
+    background: #9c5114;
+}
+
+*::-webkit-scrollbar-thumb{
+}
+
+*::-webkit-scrollbar-thumb{
+    background: white;
+    border:1px solid white;
+}
+*/
+.card{
+    width: fit-content;
+    transition: .4s ease-in-out;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+/* Right Section */
+.right{
+    width: 40%;
+}
+
+.right .input-div {
+    margin-top: 3.5em;
+    background-color: #DD7D47;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right .input-div .grid-input{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.label{
+    font-size: 1.5rem;
+    color:white;
+    text-shadow: 0 4px 5px rgb(58, 58, 58);
+}
+
+.textfield{
+    font-size: 1.25rem;
+    width: 10em;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+    resize: none;
+    outline: none;
+    text-align: center;
+    box-shadow: 0 4px 5px rgb(77, 73, 73);
+
+}
+
+.pair-div{
+    margin-bottom: 1em;
+}
+
+.right .input-div .grid-input .name-div{
+    padding-left: 1em;
+    align-self: flex-start;
+    width: fit-content;
+    display: flex;
+}
+
+.name-textfield{
+    margin-left: 6em;
+}
+
+.price-div{
+    padding-left: 1em;
+    align-self: flex-start;
+    width: fit-content;
+    display: flex;
+}
+.price-textfield{
+    width: 5em;
+    margin-left: 11.7em;
+    margin-right: 1.5em;
+}
+
+.qty-div{
+    padding-left: 1em;
+    align-self: flex-start;
+    width: fit-content;
+    display: flex;
+}
+
+.qty-textfield{
+    margin-left: 9.5em;
+}
+
+.Btn{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    transition: .4s ease-in;
+}
+
+.Btn:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 7px rgb(58, 58, 58);
+
+}
+
+.addToBtn{
+    padding: .3em;
+    border-radius: 15px;
+    background-color: #6E462F;
+}
+
+.addBtn{
+    margin-top: 2em;
+    margin-left: 21.3em;
+}
+
+.table-div{
+    background-color: #6E462F;
+    height: 40%;
+}
+
+.table-heading{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+}
+
+.table-heading h3{
+    color: white;
+    font-weight: lighter;
+}
+
+.removeItem,
+.payment{
+    background-color: #DD7D47;
+    padding: .3em;
+    border-radius: 15px;
+}
+
+.textArea-div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.textarea{
+    width: 90%;
+    border: none;
+    background-color: white;
+    resize: none;
+    outline: none;
+    box-shadow: 0 4px 5px rgb(77, 73, 73);
+
+}
+
+.btns{
+    margin-top: .7em;
+    background-color: black;
+    margin-left: 1.6em;
+    width: 90%;
+}
+
+.removeItem{
+    float: left;
+}
+
+.payment{
+    float: right;
+}
